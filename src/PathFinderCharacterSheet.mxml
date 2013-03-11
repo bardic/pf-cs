@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+                       xmlns:rl2="http://ns.robotlegs.org/flex/rl2" xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
+                       xmlns:local="*" xmlns:main="views.main.*">
+    <fx:Declarations>
+        <rl2:ContextBuilder>
+            <mvcs:MVCSBundle/>
+            <local:AppConfig />
+        </rl2:ContextBuilder>
+    </fx:Declarations>
+
+    <main:MainView />
+</s:WindowedApplication>

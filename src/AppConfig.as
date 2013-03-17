@@ -4,6 +4,8 @@
  * Email: bardic.knowledge@gmail.com
  */
 package {
+import model.CharacterModel;
+
 import org.swiftsuspenders.Injector;
 
 import robotlegs.bender.extensions.contextView.ContextView;
@@ -35,7 +37,7 @@ public class AppConfig implements  IConfig{
     {
 
         mediatorMap.map(MainView).toMediator(MainMediator);
-        //injector.map(UserModel).asSingleton();
+        injector.map(CharacterModel).asSingleton();
 
         //mediatorMap.map(UserProfileView).toMediator(UserProfileMediator);
 

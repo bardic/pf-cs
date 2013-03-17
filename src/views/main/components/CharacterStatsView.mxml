@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+         xmlns:mx="mx.containers.*">
+    <!-- To change this template use File | Settings | File Templates. -->
+    <mx:VBox>
+        <mx:HBox>
+            <s:Label text="Str" />
+            <s:TextInput widthInChars="2" />
+            <s:TextInput widthInChars="2" />
+        </mx:HBox>
+        <mx:HBox>
+            <s:Label text="Dex" />
+            <s:TextInput widthInChars="2" />
+            <s:TextInput widthInChars="2" />
+        </mx:HBox>
+        <mx:HBox>
+            <s:Label text="Con" />
+            <s:TextInput widthInChars="2" />
+            <s:TextInput widthInChars="2" />
+        </mx:HBox>
+        <mx:HBox>
+            <s:Label text="Int" />
+            <s:TextInput widthInChars="2" />
+            <s:TextInput widthInChars="2" />
+        </mx:HBox>
+        <mx:HBox>
+            <s:Label text="Wis" />
+            <s:TextInput widthInChars="2" />
+            <s:TextInput widthInChars="2" />
+        </mx:HBox>
+        <mx:HBox>
+            <s:Label text="Cha" />
+            <s:TextInput widthInChars="2" />
+            <s:TextInput widthInChars="2" />
+        </mx:HBox>
+    </mx:VBox>
+</s:Group>

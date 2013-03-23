@@ -4,21 +4,21 @@
  * Email: bardic.knowledge@gmail.com
  */
 package {
+import commands.SaveCommand;
+
+import events.CharacterEvent;
+
 import model.CharacterModel;
 
 import org.swiftsuspenders.Injector;
 
 import robotlegs.bender.extensions.contextView.ContextView;
-
 import robotlegs.bender.extensions.eventCommandMap.api.IEventCommandMap;
-
 import robotlegs.bender.extensions.mediatorMap.api.IMediatorMap;
-
 import robotlegs.bender.framework.api.IConfig;
 
-import views.main.MainMediator;
-
-import views.main.MainView;
+import views.BasicInfoView;
+import views.mediators.BasicInfoMediator;
 
 public class AppConfig implements  IConfig{
     [Inject]
@@ -33,11 +33,10 @@ public class AppConfig implements  IConfig{
     [Inject]
     public var contextView:ContextView;
 
-    public function configure():void
-    {
-
-        mediatorMap.map(MainView).toMediator(MainMediator);
+    public function configure():void{
+        mediatorMap.map(BasicInfoView).toMediator(BasicInfoMediator);
         injector.map(CharacterModel).asSingleton();
+        commandMap.map(CharacterEvent.SAVE).toCommand(SaveCommand);
 
         //mediatorMap.map(UserProfileView).toMediator(UserProfileMediator);
 

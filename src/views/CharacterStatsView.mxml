@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" title="Stats">
+    <s:titleContent>
+        <s:Label text="Characer Info" />
+        <s:Button
+                label="Back"/>
+    </s:titleContent>
+    <!-- To change this template use File | Settings | File Templates. -->
+    <fx:Script><![CDATA[
+        import util.StatUtil;
+
+        private var inputWidth:int = 80;
+
+        private function onUpdate(ev:FocusEvent):void {
+            switch(ev.currentTarget){
+                case str:
+                    strMod.text = StatUtil.getStatMod(int(str.text)).toString();
+                    break;
+                case dex:
+                    dexMod.text = StatUtil.getStatMod(int(dex.text)).toString();
+                    break;
+                case con:
+                    conMod.text = StatUtil.getStatMod(int(con.text)).toString();
+                    break;
+                case intel:
+                    intelMod.text = StatUtil.getStatMod(int(intel.text)).toString();
+                    break;
+                case wis:
+                    wisMod.text = StatUtil.getStatMod(int(wis.text)).toString();
+                    break;
+                case cha:
+                    chaMod.text = StatUtil.getStatMod(int(cha.text)).toString();
+                    break;
+            }
+        }
+        ]]></fx:Script>
+    <s:Group>
+        <s:layout>
+            <s:VerticalLayout/>
+        </s:layout>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Str" />
+            <s:TextInput id="str" widthInChars="2" width="{inputWidth}" focusOut="onUpdate(event)" />
+            <s:TextInput id="strMod" widthInChars="2" width="{inputWidth}" />
+        </s:Group>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Dex" />
+            <s:TextInput id="dex" widthInChars="2" width="{inputWidth}" focusOut="onUpdate(event)" />
+            <s:TextInput id="dexMod" widthInChars="2" width="{inputWidth}" />
+        </s:Group>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Con" />
+            <s:TextInput id="con" widthInChars="2" width="{inputWidth}" focusOut="onUpdate(event)" />
+            <s:TextInput id="conMod" widthInChars="2" width="{inputWidth}" />
+        </s:Group>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Int" />
+            <s:TextInput id="intel" widthInChars="2" width="{inputWidth}" focusOut="onUpdate(event)" />
+            <s:TextInput id="intelMod" widthInChars="2" width="{inputWidth}" />
+        </s:Group>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Wis" />
+            <s:TextInput id="wis" widthInChars="2" width="{inputWidth}" focusOut="onUpdate(event)" />
+            <s:TextInput id="wisMod" widthInChars="2" width="{inputWidth}" />
+        </s:Group>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Cha" />
+            <s:TextInput id="cha" widthInChars="2" width="{inputWidth}" focusOut="onUpdate(event)" />
+            <s:TextInput id="chaMod" widthInChars="2" width="{inputWidth}" />
+        </s:Group>
+    </s:Group>
+</s:View>

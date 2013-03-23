@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<s:View xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark" title="Basic Info">
+    <s:titleContent>
+        <s:Label text="Basic Info" />
+        <s:Button label="Save" click="onSave(event)"/>
+    </s:titleContent>
+    <!-- To change this template use File | Settings | File Templates. -->
+    <fx:Style source="/style/Default.css" />
+    <fx:Script><![CDATA[
+        import events.AppEvent;
+
+        private function onSave(ev:MouseEvent):void {
+            dispatchEvent(new AppEvent(AppEvent.SAVE))
+        }
+        ]]></fx:Script>
+    <s:Group>
+        <s:layout>
+            <s:VerticalLayout/>
+        </s:layout>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Class" />
+            <s:DropDownList prompt="Select Class">
+                <s:dataProvider>
+                <s:ArrayList>
+                    <fx:String>Barbarian</fx:String>
+                    <fx:String>Bard</fx:String>
+                    <fx:String>Cleric</fx:String>
+                    <fx:String>Druid</fx:String>
+                    <fx:String>Fighter</fx:String>
+                    <fx:String>Monk</fx:String>
+                    <fx:String>Paladin</fx:String>
+                    <fx:String>Ranger</fx:String>
+                    <fx:String>Rogue</fx:String>
+                    <fx:String>Sorcerer</fx:String>
+                    <fx:String>Wizard</fx:String>
+                </s:ArrayList>
+                </s:dataProvider>
+            </s:DropDownList>
+        </s:Group>
+        <s:Group>
+            <s:layout>
+                <s:HorizontalLayout/>
+            </s:layout>
+            <s:Label text="Race" />
+            <s:DropDownList prompt="Select Race">
+                <s:ArrayCollection>
+                    <fx:String>Dwarf</fx:String>
+                    <fx:String>Elf</fx:String>
+                    <fx:String>Gnome</fx:String>
+                    <fx:String>Half-Elf</fx:String>
+                    <fx:String>Half-Orc</fx:String>
+                    <fx:String>Halfling</fx:String>
+                    <fx:String>Human</fx:String>
+                </s:ArrayCollection>
+            </s:DropDownList>
+        </s:Group>
+
+    </s:Group>
+
+</s:View>

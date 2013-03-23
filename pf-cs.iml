@@ -2,8 +2,8 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="pf-cs">
     <configurations>
-      <configuration name="pf-cs" target-platform="Desktop" main-class="PathFinderCharacterSheet" output-file="PathFinderCharacterSheet.swf" output-folder="$MODULE_DIR$/out/production/pf-cs">
-        <dependencies target-player="11.4">
+      <configuration name="pf-cs" target-platform="Mobile" main-class="PathFinderCharacterSheet" output-file="PathFinderCharacterSheet.swf" output-folder="$MODULE_DIR$/out/production/pf-cs">
+        <dependencies>
           <entries>
             <entry library-name="libs" library-level="project">
               <dependency linkage="Merged" />
@@ -12,9 +12,9 @@
           <sdk name="flex4.9" />
         </dependencies>
         <compiler-options />
-        <packaging-air-desktop package-file-name="PathFinderCharacterSheet" />
-        <packaging-android />
-        <packaging-ios />
+        <packaging-air-desktop />
+        <packaging-android enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/PathFinderCharacterSheet-app.xml" package-file-name="pf-cs" />
+        <packaging-ios package-file-name="pf-cs" />
       </configuration>
     </configurations>
     <compiler-options />

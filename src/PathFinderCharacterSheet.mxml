@@ -1,13 +1,21 @@
 <?xml version="1.0"?>
-<s:WindowedApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
-                       xmlns:rl2="http://ns.robotlegs.org/flex/rl2" xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
-                       xmlns:local="*" xmlns:main="views.main.*">
+<s:TabbedViewNavigatorApplication xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
+                                  xmlns:rl2="http://ns.robotlegs.org/flex/rl2"
+                                  xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
+                                  xmlns:local="*" applicationDPI="320" >
+    <fx:Style source="/style/Default.css" />
     <fx:Declarations>
         <rl2:ContextBuilder>
             <mvcs:MVCSBundle/>
             <local:AppConfig />
         </rl2:ContextBuilder>
     </fx:Declarations>
-
-    <main:MainView />
-</s:WindowedApplication>
+    <!-- Reminder of how to get custom CSS stuff - height="{styleManager.getStyleDeclaration('.test').getStyle('meow')}" -->
+    <s:navigators>
+        <s:ViewNavigator label="Character Info" firstView="views.BasicInfoView" width="100%" />
+        <s:ViewNavigator label="Character Stats" firstView="views.CharacterStatsView" width="100%" />
+        <s:ViewNavigator label="Hit Points" firstView="views.HitPointsView" width="100%" />
+        <s:ViewNavigator label="Initiative" firstView="views.InitiativeView" width="100%" />
+        <s:ViewNavigator label="Skills" firstView="views.SkillsView" width="100%" />
+    </s:navigators>
+</s:TabbedViewNavigatorApplication>
